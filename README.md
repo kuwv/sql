@@ -5,12 +5,29 @@
 
 ## Overview
 
-Python SQL
+This library is a SQL implementation in Python to provide safe parameterized queries. It is inspired from jOOQ.
 
 ## Install
 
 ```
 pip install sql
+```
+
+## Perform `select` query.
+
+```
+>>> from sql import AND, EQ, SELECT
+
+>>> SELECT()\
+... .FROM('Example')\
+... .WHERE(
+...     ('Example.NAME' | EQ | '?')
+...     | AND
+...     | ('Example.TARGET' | EQ | '?')
+... )\
+... .END()
+'SELECT * FROM Example WHERE Example.NAME = ? AND Example.TARGET = ?;'
+
 ```
 
 ## Development
