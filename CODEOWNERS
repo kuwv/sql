@@ -1,0 +1,10 @@
+* @kuwv
+
+# [docs]
+# docs/ @everyone
+# mkdocs.yml @everyone
+# README.md @everyone
+
+# [code]
+# src/ @developers
+# test/ @developers
